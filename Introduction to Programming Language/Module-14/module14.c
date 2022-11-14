@@ -151,34 +151,53 @@
 
 // video 4
 
+//#include<stdio.h>
+//
+//int main()
+//{
+//    char s[102];
+//
+//    fgets(s,sizeof(s),stdin);
+//
+//    for(int i=0; i<strlen(s)-1; i++)
+//    {
+//        if(s[i]>='A'&&s[i]<='Z')
+//        {
+//          s[i]+=32;
+//        }
+//        if(!(s[i]=='a'|| s[i]=='e'|| s[i]=='i'|| s[i]=='o'||s[i]=='u')){
+//            //do nothing
+//                        printf(".%c",s[i]);
+//        }
+//    }
+//
+//    return 0;
+//}
+
+
+
+// Video-5
+
 #include<stdio.h>
 
 int main()
 {
-    char s[102];
+    char paragraph[102];
 
-    fgets(s,sizeof(s),stdin);
+    fgets(paragraph,sizeof(paragraph),stdin);
 
-    for(int i=0; i<strlen(s)-1; i++)
+    for(int i=0; paragraph[i]!='\0'; i++)
     {
-        if(s[i]>='A'&&s[i]<='Z')
+        if(paragraph[i]>='a'&&paragraph[i]<='z')
         {
-          s[i]+=32;
-        }
-        if(s[i]=='a'|| s[i]=='e'|| s[i]=='i'|| s[i]=='o'||s[i]=='u'){
-            //do nothing
-        }
-        else{
-            printf(".%c",s[i]);
+          paragraph[i] -=32;
         }
     }
+    printf("%s",paragraph);
+
 
     return 0;
 }
-
-
-
-
 
 
 
