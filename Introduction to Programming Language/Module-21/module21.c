@@ -1,29 +1,100 @@
-// 21-4 Factorial Function
+// Video-5
+
 #include<stdio.h>
 
-int fact(int x);
+int  seven_present(int n);
+int  dsum(int n);
+int  last_prime(int n);
 
 int main()
 {
-    int n,r;
-    scanf("%d %d",&n,&r);
-    int per=fact(n)/fact(n-r);
-    int comb=fact(n)/ (fact(n-r) * fact(r));
-    printf("nPr = %d\n",per);
-    printf("nCr = %d",comb);
+    int n;
+    scanf("%d",&n);
+
+    if(seven_present(n)==1 && dsum(n)>10 && last_prime(n)==1)
+    {
+        printf("Farhan's Number");
+    }
+    else
+    {
+        printf("No");
+    }
 
     return 0;
 }
 
-int fact(int x)
+
+int  seven_present(int n)
 {
-    int res=1;
-    for(int i=1; i<=x; i++)
+    while(n>0)
     {
-        res =res*i;
+        if(n%10==7)
+        {
+            return 1;
+        }
+        else
+        {
+            n/=10;
+        }
     }
-    return res;
+    return 0;
 }
+int  dsum(int n)
+{
+    int sum=0;
+    while(n>0)
+    {
+        sum +=(n%10);
+        n/=10;
+    }
+    return sum;
+}
+int  last_prime(int n)
+{
+    int ld =n%10;
+    if(ld==2 || ld==3|| ld==5||ld==7)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+
+
+
+
+
+
+// 21-4 Factorial Function
+//#include<stdio.h>
+//
+//int fact(int x);
+//
+//int main()
+//{
+//    int n,r;
+//    scanf("%d %d",&n,&r);
+//    int per=fact(n)/fact(n-r);
+//    int comb=fact(n)/ (fact(n-r) * fact(r));
+//    printf("nPr = %d\n",per);
+//    printf("nCr = %d",comb);
+//
+//    return 0;
+//}
+//
+//int fact(int x)
+//{
+//    int res=1;
+//    for(int i=1; i<=x; i++)
+//    {
+//        res =res*i;
+//    }
+//    return res;
+//}
 
 
 
