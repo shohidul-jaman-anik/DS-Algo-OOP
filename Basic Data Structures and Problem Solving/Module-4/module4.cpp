@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 int main()
 {
-    int n;
-    cin >> n;
+    int n,k;
+    cin>>n>>k;
     vector <int>a(n);
     for(int i=0; i<n; i++)
     {
@@ -11,21 +12,78 @@ int main()
     }
     for(int i=0; i<n; i++)
     {
-        string ans="No\n";
-        for(int j=0; j<n; j++)
+        if(a[i]==k)
         {
-            if(i==j)
-                continue;
-            if(a[i]==a[j])
-            {
-                ans="Yes\n";
-            }
+            cout<<"Yes";
+            break;
         }
-        cout <<"i= "<<i<<" "<<ans;
     }
 
     return 0;
 }
+
+
+
+
+//#include<bits/stdc++.h>
+//using namespace std;
+//
+//int called=0;
+//int fib(int n)
+//{
+//    if(n==0)
+//        return 0;
+//    if(n==1)
+//        return 1;
+//    //fib(n-1) + fib(n-2)
+//    int x=fib(n-1);
+//    called++;
+//    int y=fib(n-2);
+//    called++;
+//    return x+y;
+//
+//}
+//int main()
+//{
+//    int n;
+//    cin>>n;
+//    cout<<"Fib = "<<fib(n)<<"\n";
+//    cout<<"Called = "<<called<<"\n";
+//    return 0;
+//}
+
+
+
+
+
+//#include<bits/stdc++.h>
+//using namespace std;
+//int main()
+//{
+//    int n;
+//    cin >> n;
+//    vector <int>a(n);
+//    for(int i=0; i<n; i++)
+//    {
+//        cin>>a[i];
+//    }
+//    for(int i=0; i<n; i++)
+//    {
+//        string ans="No\n";
+//        for(int j=0; j<n; j++)
+//        {
+//            if(i==j)
+//                continue;
+//            if(a[i]==a[j])
+//            {
+//                ans="Yes\n";
+//            }
+//        }
+//        cout <<"i= "<<i<<" "<<ans;
+//    }
+//
+//    return 0;
+//}
 
 
 
