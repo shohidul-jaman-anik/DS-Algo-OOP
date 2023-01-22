@@ -1,24 +1,55 @@
 #include<stdio.h>
 
-int solve(int i,int n)
+int solve(int number[],int i, int n)
 {
-    if(i>n)
+    if(i==n)
     {
         return 0;
     }
-    int s=solve(i+1,n);
-    return s+i;
+    int right_sum=solve(number,i+1,n);
+
+    return right_sum+number[i];
+
 }
 
 int main()
 {
     int n;
     scanf("%d",&n);
-    int ans=solve(1,n);
+    int number[n];
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d",&number[i]);
+    }
+    int ans=solve(number,0,n);
     printf("%d",ans);
 
     return 0;
 }
+
+
+//#include<stdio.h>
+//
+//int solve(int i,int n)
+//{
+//    if(i>n)
+//    {
+//        return 0;
+//    }
+//    int s=solve(i+1,n);
+//    return s+i;
+//}
+//
+//int main()
+//{
+//    int n;
+//    scanf("%d",&n);
+//    int ans=solve(1,n);
+//    printf("%d",ans);
+//
+//    return 0;
+//}
+
 
 //#include<stdio.h>
 //
