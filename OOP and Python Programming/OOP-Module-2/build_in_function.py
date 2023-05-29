@@ -1,0 +1,7 @@
+# highest=max(5,15,25)
+highest=max([5,15,35])
+count=len([5,8,5])
+total=sum([5,8,5])
+print(total)
+# print(highest)
+# print(count)
