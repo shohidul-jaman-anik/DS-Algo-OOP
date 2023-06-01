@@ -50,12 +50,6 @@ class School:
         return "All done  for now"
         
 
-
-# alia=Student("Alia Khatun",9,1)
-# ranbir=Teacher("Ranbir Kapur","Algorithm",101)
-# print(alia)
-# print(ranbir)
-
 phitron=School("Phitron")
 phitron.enroll("Alia",4000)
 phitron.enroll("Dipika",8000)
