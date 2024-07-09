@@ -44,7 +44,53 @@
 
 # =====================
 
-alph = ("a", "b", "c", "d")
-ralph = reversed(alph)
-for x in ralph:
-  print(x)
+# alph = ("a", "b", "c", "d")
+# ralph = reversed(alph)
+# for x in ralph:
+#   print(x)
+
+# =====================================================
+
+# numbers = [14, 25, 33, 44, 35, 46, 57, 68, 9, 10]
+
+
+# def filter_even(val):
+#     if val % 2 == 0:
+#         return True
+
+
+# filter_object = filter(filter_even, numbers)
+
+# print(list(filter_object))
+
+
+# =====================================================
+
+# def cube(x):
+#     return x * x * x
+
+
+# numbers = [1, 2, 3, 4, 5]
+# newlist = map(cube, numbers)
+# print(list(newlist))
+
+# newlist = []
+# for num in numbers:
+#     newlist.append(cube(num))
+
+# print(newlist)
+
+
+# =====================================================
+from functools import reduce
+
+
+def func(a, b):
+    return a+b
+
+
+numbers = [1, 2, 3, 4, 5]
+result = reduce(func, numbers)
+print(result)
+
+# =====================================================
