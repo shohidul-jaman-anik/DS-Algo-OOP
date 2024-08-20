@@ -1,4 +1,4 @@
-# These are my personal notes belonging to Phitron.
+# These are my personal notes.
 
 This is my note. That's all I have covered from Python. This course covers various topics including data structures, algorithms, object-oriented programming, databases, and solving 500+ coding problems to become an exceptionally well world-class programmer.
 
