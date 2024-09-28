@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'blog_app'
 ]
 MIDDLEWARE = [
-    'django.middleware.security.SecuritypMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
