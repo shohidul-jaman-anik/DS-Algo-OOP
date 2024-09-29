@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>We are inside first app</h1>
+    <h3>Hello World</h1>
+    <h3>Author Name: {{author}}</h1>
+        {% comment %} {% if age > 18 %}
+            <h3>You can get a driver's license</h3>
+        {% else %}
+            <h3>Age is less than 20</h3>
+        {% endif %} {% endcomment %}
+
+        {% if marks > 80 %}
+        <h3>You get A+ </h3>
+        {% elif marks > 70 and marks < 79 %}
+        <h3>You got A gread</h3>
+        {% elif marks > 40 and marks < 69 %}
+        <h3>You are Pass</h3>
+        {% elif marks > 0 and marks < 33 %}
+        <h3>You are Fail</h3>
+
+        {% endif %}
+
+        <table border="1" width="500">
+            <tr>
+                <th>Course Id</th>
+                <th>Course Name</th>
+                <th>Course Teacher</th>
+            </tr>
+            {% for course in courses %}
+            <tr> 
+                <td>{{course.id}}</td>
+                <td>{{course.name}}</td>
+                <td>{{course.teacher}}</td>
+            </tr>
+            {% endfor %}
+            <tr/>
+        </table>
+
+        <!-- Add Value -->
+        <h1>{{ marks | add:10 }}</h1>
+
+         <!-- Divisible Check -->
+         <h1>{{ marks | divisibleby:3 }}</h1>
+
+         <!-- Length Count-->
+         <h1>{{ name | length }}</h1>
+
+         <!-- Word Count-->
+         <h1>{{ name | wordcount }}</h1>
+
+         <!-- Truncate Word -->
+         <h1>{{blog |truncatewords:5}}</h1>
+         <h1>{{blog |truncatechars:15}}</h1>
+
+         <!-- Make List -->
+         <h1>{{ name | make_list }}</h1>
+
+         <!-- Upper Case -->
+         <h1>{{ name | upper }}</h1>
+
+         <!-- Lower Case -->
+         <h1>{{ name | lower }}</h1>
+
+         <!-- Join -->
+         <h1>{{ lst | join:',' }}</h1>
+         <!-- List Slicing -->
+         <!-- List Length -->
+         <!-- List Sort -->
+         <!-- List Reverse -->
+         <!-- List Append -->
+         <!-- List Remove -->
+         <!-- List Pop -->
+         <!-- List Index -->
+  </body>
+</html>
